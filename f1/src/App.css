@@ -114,17 +114,3 @@ body {
   color: #61dafb;
   border-bottom: 2px dotted #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-h3 :hover {
-  cursor: pointer;
-  color: crimson;
-}

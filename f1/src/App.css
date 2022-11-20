@@ -79,24 +79,28 @@ body {
 }
 
 .form-input {
-  border-color: transparent;
+  border-color: #61dafb;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   text-align: center;
 }
 
 .btn {
-  background: var(--clr-primary-5);
+  background: linear-gradient(to right, black 20%, #61dafb);
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-color: transparent;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   text-transform: capitalize;
   color: var(--clr-white);
   cursor: pointer;
+}
+.btn:hover {
+  background: #fff;
+  color: #61dafb;
 }
 
 .App-header {
@@ -113,4 +117,39 @@ body {
 .results {
   color: #61dafb;
   border-bottom: 2px dotted #61dafb;
+  padding: 20px;
+  border: #fff solid 2px;
+  margin: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+}
+.winner {
+  background: #61dafb;
+  color: black;
+  border-radius: 10px;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+.underline {
+  width: 600px;
+  height: 5px;
+
+  color: #61dafb;
+}
+.race-count {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.howto {
+  font-size: 1rem;
+  color: #61dafb;
+}
+.team {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }

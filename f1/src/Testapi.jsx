@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function Testapi() {
-  const [input, setInput] = useState("1988");
+  const [input, setInput] = useState("1950");
   const [ranking, setRanking] = useState([]);
 
   const options = {
@@ -38,10 +38,16 @@ function Testapi() {
   };
 
   return (
-    <div className="App-header">
-      <header className="App">
-        <div>
-          <h1>F1 Race Results</h1>
+    <div className="main-app">
+      <div className="App-header">
+        <header className="App">
+          <div>
+            <h1 className="heading">Formula one Race Results</h1>
+            <p className="howto">
+              Please add the Year you want to check the winners of each Grand
+              Prix held that year from the first year '1950'
+            </p>
+          </div>
           <div>
             <form onSubmit={handleSubmit} className="form">
               <label htmlFor="Search">Search Season year </label>
@@ -55,26 +61,31 @@ function Testapi() {
                 placeholder="2021"
               />
               <button className="btn" type="submit" onSubmit={handleSubmit}>
-                Lights out
+                Search
               </button>
             </form>
           </div>
-        </div>
-      </header>
-      <main>
-        {ranking.map((result, index) => {
-          const { grandPrix, date, driver, team, laps } = result;
-          return (
-            <div key={index} className="results">
-              <p>Grand Prix: {grandPrix}</p>
-              <p>date: {date}</p>
-              <p>Winner: {driver}</p>
-              <p>Team: {team}</p>
-              <p>Total laps : {laps}</p>
-            </div>
-          );
-        })}
-      </main>
+        </header>
+        <main>
+          <h3 className="race-count">Total Races Held:{ranking.length}</h3>
+          {ranking.map((result, index) => {
+            const { grandPrix, date, driver, team, laps } = result;
+            return (
+              <>
+                <div key={index} className="results">
+                  <h4>🖲️Grand Prix: {grandPrix}</h4>
+                  <p>📅date: {date}</p>
+                  <p className="winner">🏁Winner: {driver}</p>
+                  <a href="" className="team">
+                    🧑‍🤝‍🧑Team: {team}
+                  </a>
+                  <p>💯Total laps : {laps}</p>
+                </div>
+              </>
+            );
+          })}
+        </main>
+      </div>
     </div>
   );
 }

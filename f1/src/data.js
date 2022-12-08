@@ -1,3 +1,10 @@
+const totalCount = 6;
+const changeit = () => {
+  let num = Math.ceil(Math.random() * totalCount);
+  document.body.background = "image/" + num + ".jpg";
+  document.body.style.backgroundRepeat = "repeat"; // Background repeat
+};
+
 const drivers = [
   {
     position: 1,
